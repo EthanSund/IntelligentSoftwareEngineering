@@ -1,0 +1,6 @@
+RAW DATA (10-FOLD)
+Baseline (TF-IDF + NB) F1: 0.6146
+SABER F1: 0.6475
+Baseline Accuracy: 0.7901
+SABER Accuracy: 0.8364
+Wilcoxon P-value: 0.19336
