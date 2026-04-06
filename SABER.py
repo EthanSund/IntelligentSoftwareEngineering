@@ -16,6 +16,9 @@ from sklearn.preprocessing import StandardScaler
 from nltk.corpus import stopwords
 from scipy import stats
 
+#methods used for the baseline solution originate from, as referenced in the deliverable
+#https://github.com/ideas-labo/ise-lab-solution/tree/main/lab1
+
 #stopwords required
 nltk.download('stopwords', quiet=True)
 #model for semantic embeddings
@@ -56,7 +59,7 @@ def clean_str(string):
     string = re.sub(r"\"", "", string)
     return string.strip().lower()
 
-#-----SABER-----
+#-----SABER (my solution)-----
 
 class SpacyVectorizer(BaseEstimator, TransformerMixin):
     #Branch 1: Semantic Embeddings - converts natural lang into vector embeddings
@@ -113,7 +116,7 @@ REPEAT=10
 base_f1s, saber_f1s = [],[]
 base_acc, saber_acc = [],[]
 
-#hyperparameters for Naive Bayes
+#hyperparameters for Naive Bayes (baseline)
 params = {'var_smoothing': np.logspace(-12,0,13)}
 
 for x in range(REPEAT):
