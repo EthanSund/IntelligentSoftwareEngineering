@@ -120,6 +120,7 @@ base_acc, saber_acc = [],[]
 params = {'var_smoothing': np.logspace(-12,0,13)}
 
 for x in range(REPEAT):
+    #Baseline setup
     #train/test split 80/20.
     #random_state=x means identical splits for baseline & saber
     indices = np.arange(data.shape[0])
