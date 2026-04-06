@@ -146,6 +146,7 @@ for x in range(REPEAT):
         clf,
         params,
         cv=5,
+        # accuracy used to align with metrics chosen for the comparison
         scoring='accuracy'
     )
     grid.fit(X_train, y_train)
